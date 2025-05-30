@@ -1,4 +1,18 @@
 <?php
+require 'vendor/autoload.php'; // Подключаем автозагрузчик Composer
+
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
+// Создаем логгер
+$log = new Logger('name');
+$log->pushHandler(new StreamHandler('app.log', Logger::WARNING));
+
+// Добавляем записи в лог
+$log->warning('Это предупреждение!');
+$log->error('Это ошибка!');
+
+// Ваш код для работы с книгами
 require 'src/Book.php';
 require 'src/EBook.php';
 require 'src/PhysicalBook.php';

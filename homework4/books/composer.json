@@ -1,7 +1,5 @@
 {
-    "autoload": {
-        "psr-4": {
-            "Books\\": "src/"
-        }
+    "require": {
+        "monolog/monolog": "^2.0" 
     }
 }
